@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <io.alterac.blurkit.BlurLayout
+        android:id="@+id/blurlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/openchat"
+            android:text="Open To WhatsApp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:textSize="16dp"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="30dp"
+            android:drawablePadding="30dp"
+            android:drawableTint="@color/white"
+            android:drawableLeft="@drawable/ic_whatsapp"
+            android:fontFamily="@font/sansmedium"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:shadowColor="@color/blackblur"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:foreground="?selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/savenum"
+            android:text="Save Phone Number"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="30dp"
+            android:drawablePadding="30dp"
+            android:drawableTint="@color/white"
+            android:drawableLeft="@drawable/ic_baseline_person_add_alt_24"
+            android:textSize="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:shadowColor="@color/blackblur"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:foreground="?selectableItemBackground"
+            android:fontFamily="@font/sansmedium"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    </io.alterac.blurkit.BlurLayout>
+</RelativeLayout>

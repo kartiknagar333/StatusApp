@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/image_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/image_recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:clipToPadding="false"
+            android:layoutAnimation="@anim/layout_animation"
+            android:paddingHorizontal="2.5dp"
+            android:paddingBottom="100dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ImageView
+        android:id="@+id/noimg_image"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_undraw_photograph_re_up3b"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+
+    <TextView
+        android:id="@+id/msg_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/noimg_image"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="20dp"
+        android:shadowColor="@color/blackblur"
+        android:shadowDx="1"
+        android:fontFamily="@font/sansregular"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toStartOf="@id/videocard"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/imgbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blackGrey"
+            android:src="@drawable/ic_outline_photo_24"
+            app:backgroundTint="@color/blackGrey"
+            app:borderWidth="3dp"
+            app:elevation="1dp"
+            app:rippleColor="@color/darkred"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/ptv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/bold"
+            android:shadowColor="@color/blackblur"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:text="PHOTO"
+            android:textColor="@color/darkred" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/videocard"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/videobutton"
+            android:layout_width="wrap_content"
+            app:elevation="1dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blackGrey"
+            android:src="@drawable/ic_outline_videocam_24"
+            app:backgroundTint="@color/blackGrey"
+            app:borderWidth="3dp"
+            app:rippleColor="@color/darkred"
+            app:tint="@color/white" />
+        <TextView
+            android:id="@+id/vtv"
+            android:text="VIDEO"
+            android:shadowDx="1"
+            android:shadowRadius="1"
+            android:shadowDy="1"
+            android:layout_marginTop="10dp"
+            android:shadowColor="@color/blackblur"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@id/videocard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blackGrey"
+            android:src="@drawable/ic_outline_chat_24"
+            app:backgroundTint="@color/blackGrey"
+            app:borderWidth="3dp"
+            app:elevation="1dp"
+            app:rippleColor="@color/darkred"
+            app:tint="@color/white" />
+        <TextView
+            android:id="@+id/ctv"
+            android:text="CHAT"
+            android:shadowDx="1"
+            android:shadowRadius="1"
+            android:shadowDy="1"
+            android:layout_marginTop="10dp"
+            android:shadowColor="@color/blackblur"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

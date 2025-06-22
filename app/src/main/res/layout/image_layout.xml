@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/image_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imagecard"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="5dp"
+        android:focusable="true"
+        android:layout_centerHorizontal="true"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="@color/whiteblur"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageview"
+            android:minHeight="150dp"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </androidx.cardview.widget.CardView>
+    <ProgressBar
+        android:layout_centerVertical="true"
+        android:id="@+id/progressbar"
+        android:indeterminateTint="@color/blackblur"
+        android:layout_width="30dp"
+        android:elevation="10dp"
+        android:background="@color/empty"
+        android:layout_centerHorizontal="true"
+        android:layout_height="30dp" />
+    <ImageView
+        android:id="@+id/imgicon"
+        android:layout_margin="15dp"
+        android:elevation="3dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_videocam_black_24dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+</RelativeLayout>

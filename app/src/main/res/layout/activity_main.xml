@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <io.alterac.blurkit.BlurLayout
+        android:id="@+id/blurlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="20dp"
+                    android:elevation="8dp"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:id="@+id/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:shadowColor="@color/blackblur"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:letterSpacing="0.1"
+                    android:text="@string/app_name"
+                    android:textColor="#F2F2F2"
+                    android:fontFamily="@font/bold"
+                    android:textSize="40dp"/>
+                <LinearLayout
+                    android:id="@+id/about_text"
+                    android:layout_margin="20dp"
+                    android:elevation="5dp"
+                    android:paddingVertical="15dp"
+                    android:paddingLeft="10dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/back_cate_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:padding="20dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_whatsapp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+
+                            app:tint="@color/darkred" />
+                        <TextView
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:shadowColor="@color/blackblur"
+                            android:shadowDx="1"
+                            android:fontFamily="@font/sansregular"
+                            android:textStyle="bold"                            android:shadowDy="1"
+                            android:layout_gravity="center"
+                            android:lineHeight="20dp"
+                            android:shadowRadius="1"
+                            android:textAllCaps="true"
+                            android:text="@string/wa_msg"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:padding="20dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/instagram"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"/>
+                        <TextView
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sansregular"
+                            android:textStyle="bold"
+                            android:shadowColor="@color/blackblur"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:lineHeight="20dp"
+                            android:shadowRadius="1"
+                            android:textAllCaps="true"
+                            android:text="@string/insta"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:padding="20dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/logo"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sansregular"
+                            android:textStyle="bold"
+                            android:shadowColor="@color/blackblur"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:lineHeight="20dp"
+                            android:shadowRadius="1"
+                            android:textAllCaps="true"
+                            android:text="@string/oth"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </io.alterac.blurkit.BlurLayout>
+
+</RelativeLayout>

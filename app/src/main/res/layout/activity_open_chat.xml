@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".OpenChat">
+
+    <io.alterac.blurkit.BlurLayout
+        android:id="@+id/blurlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/topbanner"
+        android:gravity="center_vertical"
+        android:paddingVertical="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:padding="8dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:id="@+id/backactivity"
+            android:src="@drawable/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:tint="@color/white" />
+        <TextView
+            android:text="Chats"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:shadowDx="1"
+            android:shadowRadius="1"
+            android:shadowDy="1"
+            android:shadowColor="@color/blackblur"
+            android:textSize="20dp"
+            android:fontFamily="@font/bold"
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/removedownloads"
+            android:layout_marginRight="15dp"
+            android:padding="8dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_baseline_clear_all_24"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            app:tint="@color/white" />
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/next"
+            android:layout_marginRight="20dp"
+            android:padding="8dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_check_black_24dp"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            app:tint="#1de9b6" />
+        <ProgressBar
+            android:id="@+id/pbar"
+            android:visibility="gone"
+            android:progressTint="@color/white"
+            android:layout_marginRight="20dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/fourla"
+        android:layout_below="@+id/topbanner"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/pname"
+            android:hint="Type Name ( Optional )"
+            android:shadowDx="1"
+            android:shadowRadius="1"
+            android:textSize="15dp"
+            android:enabled="true"
+            android:layout_marginHorizontal="20dp"
+            android:shadowDy="1"
+            android:textAllCaps="true"
+            android:shadowColor="@color/blackblur"
+            android:fontFamily="@font/bold"
+            android:background="@drawable/darkbackbutton"
+            android:padding="8dp"
+            android:inputType="textPersonName"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:textColorHint="#99FFFFFF"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fourla"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dp"
+            android:fontFamily="@font/bold"
+            android:gravity="left"
+            android:shadowColor="@color/blackblur"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:text="Country Code"
+            android:textColor="@color/white" />
+        <TextView
+            android:text="Phone Number"
+            android:shadowDx="1"
+            android:shadowRadius="1"
+            android:shadowDy="1"
+            android:shadowColor="@color/blackblur"
+            android:gravity="left"
+            android:fontFamily="@font/bold"
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dp"
+            android:textColor="@color/white"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/thirdla"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/secondla"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/darkbackbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.rilixtech.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            app:ccp_textColor="@color/white"
+            android:gravity="center_vertical"
+            android:shadowDx="1"
+            app:ccp_arrowSize="20dp"
+            android:shadowRadius="1"
+            app:ccp_dialogTextColor="@color/white"
+            android:shadowDy="1"
+            android:layout_gravity="center_vertical"
+            android:shadowColor="@color/blackblur"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/number"
+            android:hint="0000000000"
+            android:letterSpacing="0.3"
+            android:imeOptions="actionDone"
+            android:shadowDx="1"
+            android:shadowRadius="1"
+            android:shadowDy="1"
+            android:shadowColor="@color/blackblur"
+            android:textSize="20dp"
+            android:backgroundTint="@color/empty"
+            android:fontFamily="@font/bold"
+            android:inputType="number"
+            android:digits="0987654321"
+            android:textColor="#1de9b6"
+            android:singleLine="true"
+            android:maxLength="15"
+            android:textColorHint="#99FFFFFF"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/noimg_image"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_undraw_begin_chat_re_v0lw"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/msg_img"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/noimg_image"
+        android:gravity="center"
+        android:shadowDx="1"
+        android:shadowRadius="1"
+        android:shadowDy="1"
+        android:lineHeight="20dp"
+        android:fontFamily="@font/sansregular"
+        android:textStyle="bold"
+        android:text="Direct Open WhatsApp Chat Without Saving Number in Contact List and Refreshing WhatsApp"
+        android:shadowColor="@color/blackblur"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/image_recycleview"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/thirdla"
+        android:layout_centerHorizontal="true"
+        android:clipToPadding="false"
+        android:layoutAnimation="@anim/layout_animation"
+        android:paddingHorizontal="2.5dp"
+        android:paddingBottom="100dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</RelativeLayout>

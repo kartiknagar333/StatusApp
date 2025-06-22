@@ -1,0 +1,100 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace = "com.example.statussaverWAIG"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.statussaverWAIG"
+        minSdk 21
+        targetSdk 34
+        versionCode 4
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    def room_version = '2.7.2'
+    def lifecycle_version = '2.9.1'
+
+    implementation 'com.github.joielechong:countrycodepicker:2.1.5'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.9.0'
+    implementation 'androidx.navigation:navigation-ui:2.9.0'
+    testImplementation 'junit:junit:4.13.2'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:29.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+
+    implementation 'com.google.android.material:material:1.12.0'
+
+
+    // In-App Updates
+    implementation "com.google.android.play:in-app-updates:2.0.0"
+
+    // In-App Reviews
+    implementation "com.google.android.play:review:2.0.2"
+
+    // Dynamic feature installs (formerly “SplitInstall”)
+    implementation "com.google.android.play:feature-delivery:2.1.0"
+
+    // Asset packs delivery
+    implementation "com.google.android.play:asset-delivery:2.3.0"
+    implementation 'com.android.volley:volley:1.2.1'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:29.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:29.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:palette-v7:29.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation 'org.jsoup:jsoup:1.20.1'
+
+
+
+    //noinspection GradleDependency
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+    //noinspection LifecycleAnnotationProcessorWithJava8
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+
+
+    //noinspection GradleCompatible
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:recyclerview-v7:29.0.0'
+    androidTestImplementation 'androidx.test:runner:1.6.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+}

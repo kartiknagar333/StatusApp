@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextView
+    android:id="@+id/categortText"
+    android:layout_width="wrap_content"
+    android:textColor="@color/white"
+    android:paddingVertical="8dp"
+    android:layout_marginRight="5dp"
+    android:paddingHorizontal="10dp"
+    android:background="@drawable/back_cate_item"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/sansmedium"
+    android:shadowColor="@color/blackblur"
+    android:shadowDx="1"
+    android:shadowDy="1"
+    android:shadowRadius="1"
+    xmlns:android="http://schemas.android.com/apk/res/android"/>

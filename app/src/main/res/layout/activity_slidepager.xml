@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/relative"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <ImageView
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="15dp"
+            android:padding="8dp"
+            android:elevation="1dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:id="@+id/back"
+            android:src="@drawable/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:tint="@color/white" />
+        <androidx.viewpager2.widget.ViewPager2
+            android:orientation="horizontal"
+            android:id="@+id/slide"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:id="@+id/swipemsg"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ic_outline_swipe"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"/>
+                <TextView
+                    android:text="SWIPE LEFT OR RIGHT"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:layout_margin="20dp"
+                    android:fontFamily="@font/bold"
+                    android:shadowColor="@color/blackblur"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+</RelativeLayout>

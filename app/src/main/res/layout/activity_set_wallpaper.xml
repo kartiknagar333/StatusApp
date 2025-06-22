@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/setbtn"
+        android:orientation="horizontal"
+        android:elevation="1dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:padding="8dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:id="@+id/back"
+            android:src="@drawable/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:tint="@color/white" />
+        <TextView
+            android:text="Set Wallpaper"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:padding="15dp"
+            android:shadowColor="@color/blackblur"
+            android:shadowDy="1.5"
+            android:shadowRadius="1.5"
+            android:shadowDx="1.5"
+            android:fontFamily="@font/bold"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/check"
+            app:fabCustomSize="40dp"
+            android:visibility="gone"
+            android:backgroundTint="@color/white"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            app:rippleColor="@color/black"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_check_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ProgressBar
+            android:layout_centerVertical="true"
+            android:id="@+id/progressbar"
+            android:indeterminateTint="@color/white"
+            android:layout_width="30dp"
+            android:layout_marginRight="15dp"
+            android:elevation="10dp"
+            android:background="@color/empty"
+            android:layout_centerHorizontal="true"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/wallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+</RelativeLayout>

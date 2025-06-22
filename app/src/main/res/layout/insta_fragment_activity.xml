@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/image_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:id="@+id/serview"
+        android:visibility="gone"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:background="@drawable/darkbackbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/edit_url"
+            android:hint="Paste Instagram Link "
+            android:imeOptions="actionSearch"
+            android:textSize="14dp"
+            android:padding="13dp"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:fontFamily="@font/sansmedium"
+            android:textColorHint="@color/white"
+            android:backgroundTint="@color/empty"
+            android:textColorLink="@color/colorPrimary"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/close"
+            android:layout_gravity="center"
+            android:layout_alignParentRight="true"
+            android:padding="8dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_close_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/noimg_image"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_undraw_photograph_re_up3b"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+    <TextView
+        android:id="@+id/msg_img"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/noimg_image"
+        android:gravity="center"
+        android:shadowDx="1"
+        android:textSize="16dp"
+        android:shadowRadius="1"
+        android:shadowDy="1"
+        android:textStyle="bold"
+        android:fontFamily="@font/sansregular"
+        android:shadowColor="@color/blackblur"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/serview">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/image_recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:clipToPadding="false"
+            android:layoutAnimation="@anim/layout_animation"
+            android:paddingHorizontal="2.5dp"
+            android:paddingBottom="50dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="25dp"
+        app:borderWidth="0dp"
+        android:tint="@color/black"
+        app:elevation="1dp"
+        android:src="@drawable/ic_add_24"
+        android:backgroundTint="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
