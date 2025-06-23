@@ -1,9 +1,9 @@
 # StatusApp
 ## Features
-#### 📲 Get WhatsApp status & Instagram Feed-Reel photo & video
-#### 💬 Chat with any WhatsApp phone number without saving number
-#### 📥 Save & Download Photo - Video of Instagram Feed post & Reel
-#### 🖼️ Set Direct Wallpaper from Internet High-Quality Wallpaper Site
+- #### 📲 Get WhatsApp status & Instagram Feed-Reel photo & video
+- #### 💬 Chat with any WhatsApp phone number without saving number
+- #### 📥 Save & Download Photo - Video of Instagram Feed post & Reel
+- #### 🖼️ Set Direct Wallpaper from Internet High-Quality Wallpaper Site
 
 
 ## Architecture
@@ -19,5 +19,9 @@
 
 
 ## Screenshots
+- **AboutApp**
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/b96df537-b13b-466c-9f40-37548e5c4ed1" alt="Home" width="380" height="720" />
+</div>
+<br>
 
-![app](https://github.com/user-attachments/assets/b96df537-b13b-466c-9f40-37548e5c4ed1)
